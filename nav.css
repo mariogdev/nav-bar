@@ -10,7 +10,8 @@ body{
     overflow-x: hidden;
     background-color: #A3AB78;
 }
-nav{
+
+.maqui-nav-project {
     height: 6rem;
     width: 100vw;
     background-color: white;
@@ -21,129 +22,71 @@ nav{
 }
 
 /*Styling logo*/
-.logo{
-    padding:1vh 1vw;
-    text-align: center;
-}
-.logo img {
-    height: 5rem;
-    width: 5rem;
-}
-
-.logo-movil {
+.maqui-nav-logo-mobile {
     display: none;
 }
-.contact-icon-movil{
+.maqui-nav-contact-mobile {
     display: block;
     position: absolute;
     right: 10px;
     top: 35%;
 }
-.home-ramval-telefono {
+.nav-contact-phone {
     position: relative;
     right: 10px;
-    /* display: inline; */
-    background-image: url(https://ramvalinmobiliaria.pe/wp-content/uploads/2021/08/icono-llamada.svg);
+    background-image: url(https://www.maquiconstructores.com/wp-content/uploads/2022/05/pv-telefono.svg);
     background-repeat: no-repeat;
     background-position: center;
     padding: 15px;
 }
-.home-ramval-wsp {
+.nav-contact-wsp {
     display: inline;
-    background-image: url(https://ramvalinmobiliaria.pe/wp-content/uploads/2021/08/icono-wsp.svg);
+    background-image: url(https://www.maquiconstructores.com/wp-content/uploads/2022/05/pv-whatsapp.svg);
     background-repeat: no-repeat;
     background-position: center;
-    padding: 11px;
+    padding: 15px;
 }
 
 /*Styling Links*/
-.nav-links{
+.maqui-nav-links {
+    height: 6rem;
     display: flex;
     list-style: none; 
     width: 88vw;
     padding: 0 0.7vw;
     justify-content: space-evenly;
     align-items: center;
-    text-transform: uppercase;
+    margin: 0px;
 }
-.nav-links li a{
-    text-decoration: none;
+.maqui-nav-links li a{
+    text-decoration: none !important;
     margin: 0 0.7vw;
     color: #01776b;
 }
-.nav-links li a:hover {
-    font-weight: bold;
-}
-.nav-links li {
+.maqui-nav-links li {
     position: relative;
-}
-.nav-links li a::before {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0%;
-    background-color: #61DAFB;
-    position: absolute;
-    transition: all ease-in-out 250ms;
-    margin: 0 0 0 10%;
-}
-/* .nav-links li a:hover::before{
-    width: 80%;
-} */
-
-/*Styling Buttons*/
-.login-button{
-    background-color: transparent;
-    border: 1.5px solid #f2f5f7;
-    border-radius: 2em;
-    padding: 0.6rem 0.8rem;
-    margin-left: 2vw;
-    font-size: 1rem;
-    cursor: pointer;
-
-}
-.login-button:hover {
-    color: #131418;
-    background-color: #f2f5f7;
-    border:1.5px solid #f2f5f7;
-    transition: all ease-in-out 350ms;
-}
-.join-button{
-    color: #131418;
-    background-color: #61DAFB;
-    border: 1.5px solid #61DAFB;
-    border-radius: 2em;
-    padding: 0.6rem 0.8rem;
-    font-size: 1rem;
-    cursor: pointer;
-}
-.join-button:hover {
-    color: #f2f5f7;
-    background-color: transparent;
-    border:1.5px solid #f2f5f7;
-    transition: all ease-in-out 350ms;
 }
 
 /*Styling Hamburger Icon*/
-.hamburger div{
+.maqui-nav-menu div {
     width: 30px;
     height:3px;
     background: darkgray;
     margin: 5px;
     transition: all 0.3s ease;
 }
-.hamburger{
+.maqui-nav-menu {
     display: none;
 }
 
 /*Stying for small screens*/
-@media screen and (max-width: 800px){
-    nav{
+@media screen and (max-width: 800px) {
+    .maqui-nav-project {
         position: fixed;
         z-index: 3;
         height: 90px;
     }
-    .logo-movil {
+    .maqui-nav-logo-mobile {
         position: absolute;
         display: block;
         width: 180px;
@@ -152,7 +95,7 @@ nav{
         transform: translate(-50%, 30%);
     }
     
-    .hamburger{
+    .maqui-nav-menu {
         display:block;
         position: absolute;
         cursor: pointer;
@@ -162,7 +105,7 @@ nav{
         z-index: 2;
         transition: all 0.7s ease;
     }
-    .nav-links{
+    .maqui-nav-links {
         position: fixed;
         background: rgb(0, 186, 185);
         height: 100vh;
@@ -173,74 +116,69 @@ nav{
         transition: all 1s ease-out;
         pointer-events: none;
     }
-    .nav-links.open{
+    .maqui-nav-links.open {
         clip-path: circle(2000px at 10% -10%);
         -webkit-clip-path: circle(2000px at 10% -10%);
         pointer-events: all;
     }
-    .nav-links li{
+    .maqui-nav-links li {
         opacity: 0;
     }
-    .nav-links li a{
+    .maqui-nav-links li a {
         color: white;
     }
-    .nav-links li:nth-child(1){
+    .maqui-nav-links li:nth-child(1) {
         transition: all 0.5s ease 0.2s;
     }
-    .nav-links li:nth-child(2){
+    .maqui-nav-links li:nth-child(2) {
         transition: all 0.5s ease 0.4s;
     }
-    .nav-links li:nth-child(3){
+    .maqui-nav-links li:nth-child(3) {
         /* transition: all 0.5s ease 0.6s; */
         display: none;
     }
-    .nav-links li:nth-child(4){
+    .maqui-nav-links li:nth-child(4) {
         transition: all 0.5s ease 0.7s;
     }
-    .nav-links li:nth-child(5){
+    .maqui-nav-links li:nth-child(5) {
         transition: all 0.5s ease 0.8s;
     }
-    .nav-links li:nth-child(6){
+    .maqui-nav-links li:nth-child(6) {
         transition: all 0.5s ease 0.9s;
         margin: 0;
     }
-    /* .nav-links li:nth-child(7){
-        transition: all 0.5s ease 1s;
-        margin: 0;
-    } */
-    li.fade{
+    .maqui-nav-links li.fade {
         opacity: 1;
     }
 }
 /*Animating Hamburger Icon on Click*/
-.toggle .line1{
+.nav-toggle .line1 {
     /* transform: rotate(-45deg) translate(-5px,6px); */
     transform: rotate(-45deg) translate(-2px,4px);
 }
-.toggle .line3{
+.nav-toggle .line3 {
     transition: all 0.7s ease;
     width:0;
 }
-.toggle .line2{
+.nav-toggle .line2 {
     /* transform: rotate(45deg) translate(-5px,-6px); */
     transform: rotate(45deg) translate(-2px,-4px);
 }
 
-.hamburger .line1{
+.maqui-nav-menu .line1 {
     width: 35px;
 }
-.hamburger .line2{
+.maqui-nav-menu .line2 {
     width: 35px;
 }
-.hamburger .line3{
+.maqui-nav-menu .line3 {
     width: 15px;
 }
 
-
-.nav-links li:nth-child(3) {
+.maqui-nav-links li:nth-child(3) {
     width: 200px;
 }
-.nav-links li:nth-child(6) a {
+.maqui-nav-links li:nth-child(6) a {
     background-color: #01776b;
     border-radius: 10px;
     height: 2.5vw;
