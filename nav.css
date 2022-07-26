@@ -10,6 +10,15 @@ body{
     overflow-x: hidden;
     background-color: #A3AB78;
 }
+button {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    background-color: #00809d;
+    border:none;
+    border-radius: 10px;
+    padding: 10px;
+}
 
 .maqui-nav-project {
     height: 6rem;
