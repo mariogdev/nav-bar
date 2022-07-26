@@ -26,3 +26,14 @@ let deployLinks = function () {
     hamburger.classList.toggle("nav-toggle");
 }
 hamburger.addEventListener('click', deployLinks);
+
+async function sharedMobile() {
+    const shareData = {
+        title: 'Obituario 1',
+        text: 'Obituario 1',
+        url: 'https://funeralesramz.pe/wp-content/uploads/2022/07/pesame-1-e1658331953761.png',
+    }
+
+    await navigator.share(shareData)
+    resultPara.textContent = 'I shared my data successfully'
+}
